@@ -31,7 +31,7 @@ jobs:
       - name: Executing helm chart on Kubernetes Server Remotely
         uses: appleboy/ssh-action@v0.1.10
         with:
-          host: 3.239.254.180
+          host: 44.192.109.193
           username: root 
           password: root 
           port: 22 

@@ -12,6 +12,6 @@ spec:
    labels:
     app: capstone
   spec:
-  containers:
-   - name: c1
-     image: mivodu/capstoneimage
+   containers:
+    - name: c1
+      image: mivodu/capstoneimage

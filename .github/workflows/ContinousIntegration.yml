@@ -28,3 +28,17 @@ jobs:
           context: .
           push: true
           tags: ${{ vars.DOCKERHUB_REPOSITORY }}/capstoneimage:latest
+      - name: Executing helm chart on Kubernetes Server Remotely
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: 3.239.254.180
+          username: root 
+          password: root 
+          port: 22 
+          script: |
+            git clone https://github.com/mivodu/Vodafone-DevOps-CapstoneProject.git
+            cd Vodafone-DevOps-CapstoneProject
+            helm list -A
+            helm install mavenbuild-dev ./mywebapp
+            helm list -A
+            kubectl get all

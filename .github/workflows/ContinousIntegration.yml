@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: capstoneimage:latest
+          tags: mivodu/capstoneimage:latest
